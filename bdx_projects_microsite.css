@@ -10,9 +10,16 @@ html, body {
 
 header {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 100px 1fr;
   grid-template-rows: 1;
   /* height: 100px; */
+}
+
+nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
 }
 
 main {
@@ -49,16 +56,29 @@ a {
   background-color: gray;
 }
 
-.menuBtn {
+#menuBtn {
+  font-size: 2rem;
+  color: white;
+}
+
+.menuItems {
   color: white;
   font-family: sans-serif;
   background-color: gray;
 }
 
-ul li.menuBtn ul{
+ul.dropdown li{
   display: none;
 }
 
-ul li.menuBtn:hover ul {
+ul.dropdown li {
+  display: block;
+}
+
+ul li.menuItems ul{
+  display: none;
+}
+
+ul li.menuItems:hover ul {
   display: block;
 }
